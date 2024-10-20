@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiThumbsUp } from "react-icons/fi";
+import FavoriteIcon from "./FavoriteIcon";
 
 export default function Card({ result, genre }) {
-  const isMovieOrTv = genre === "popular" || genre === "top_rated" || genre === "now_playing";
+  const isMovieOrTv =
+    genre === "popular" || genre === "top_rated" || genre === "now_playing";
   const imagePath = result.backdrop_path || result.poster_path || null;
 
   return (
@@ -29,7 +31,9 @@ export default function Card({ result, genre }) {
               <h2 className="z-8 mt-3 text-3xl font-bold text-white">
                 {result.title || result.name}
               </h2>
-              <p className="line-clamp-2 text-md text-white">{result.overview}</p>
+              <p className="line-clamp-2 text-md text-white">
+                {result.overview}
+              </p>
               <p className="flex items-center text-white ">
                 {result.release_date}
                 <FiThumbsUp className="h-5 mr-1 ml-3" />
@@ -39,6 +43,8 @@ export default function Card({ result, genre }) {
           )}
         </div>
       </Link>
+      <FavoriteIcon favId={result.id}/>
+
     </div>
   );
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section className="mx-auto max-w-7xl sm:px-6 lg:px-8 mt-20">
+    <footer className="width-full sm:px-6 lg:px-8 mt-20">
       <div className="relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:rounded-3xl sm:border sm:border-gray-100 sm:px-16 sm:shadow-sm">
         <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Join our community today!
@@ -52,6 +52,6 @@ export default function Footer() {
         </div>
 
       </div>
-    </section>
+    </footer>
   );
 }
